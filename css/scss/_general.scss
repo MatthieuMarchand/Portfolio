@@ -1,0 +1,396 @@
+html{
+    background: $background_grey_color;
+}
+body::-webkit-scrollbar {
+    width: 12px; /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+    background: $background_grey_color; /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+    background-color: $black_color; /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    border: 3px solid $background_grey_color; /* creates padding around scroll thumb */
+}
+a {
+    text-decoration: none;
+    color: $black_color;
+    transition: 0.3s $bezier;
+}
+a:not(.name):hover {
+    opacity: 0.6;
+}
+h3 {
+    @include rockstar(20);
+}
+h2 {
+    @include rockstar;
+}
+.paragraph {
+    @include archia(16);
+}
+button {
+    all: unset;
+    cursor: pointer;
+    transition: 0.3s $bezier;
+}
+button:hover {
+    opacity: 0.6;
+}
+.hidden {
+    display: none;
+}
+@media (max-width: 1000px) {
+    .paragraph {
+        @include archia(14);
+    }
+}
+@media (max-width: 700px) {
+    .paragraph {
+        @include archia(12);
+    }
+}
+@media (max-width: 500px) {
+    h3 {
+        @include rockstar(16);
+    }
+}
+
+// ! FIRST CONTAINER
+.first-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 100vw;
+}
+.first-mid-box {
+    display: flex;
+    flex: 1;
+    margin-top: 60px;
+}
+.first-left-box{
+    flex-shrink: 1;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    div {
+        width: calc(100% - 30%);
+        height: auto;
+    }
+    .div-presentation, .div-projects {
+        margin-left: 5%;
+        p {
+            margin-top: 1%;
+        }
+        :first-child {
+            margin-left: 10%;
+        }
+    }
+    .div-passions{
+        margin-right: 5%;
+        align-self: end;
+        :first-child {
+            margin-left: 10%;
+        }
+        p {
+            margin-top: 1%;
+        }
+    }
+    .div-readMore {
+        margin-right: 5%;
+        width: auto;
+        align-self: end;
+        @include archia;
+    }
+}
+.first-right-box {
+    flex-shrink: 1;
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    @include border(0,0,0,1);
+    .top-tape{
+        height: 40px;
+        overflow: hidden;
+        @include border(0,0,1);
+        display: flex;
+        align-items: center;
+        p {
+            @include rockstar;
+            @include scroll-right(5);
+            white-space: nowrap;
+        }
+    }
+    .bottom-tape{
+        position: absolute;
+        bottom: 0;
+        height: 40px;
+        overflow: hidden;
+        @include border(1);
+        display: flex;
+        align-items: center;
+        p {
+            @include rockstar;
+            @include scroll-left(5);
+            white-space: nowrap;
+        }
+    }
+}
+.first-top-box {
+    height: 60px;
+    width: 100%;
+    @include border(0,0,1);
+    display: flex;
+    position: fixed;
+    background: $background_grey_color;
+    z-index: 90;
+    div {
+        height: 100%;
+        width: auto;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        display: flex;
+        align-items: center;
+        @include border(0,1);
+        a {
+            @include rockstar;
+            color: $black_color;
+        }
+    }
+    nav {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        a {
+            @include archia;
+        }
+        .menu {
+            color: $background_grey_color;
+            background: $black_color;
+            border-radius: 500px;
+            width: 70px;
+            text-align: center;
+        }
+    }
+}
+.first-bottom-box {
+    min-height: 135px;
+    width: 100%;
+    @include border(1,0,1);
+    @extend %center;
+    overflow: hidden;
+    p {
+        @include rockstar(120);
+        @include scroll-right;
+        white-space: nowrap;
+    }
+}
+.portrait{
+    height: calc(100% - 82px);
+    @extend %center;
+    div{
+        position: relative;
+        height: calc(100% - 40px);
+        width: calc(100% - 20px);
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        overflow: hidden;
+        img {
+            position: absolute;
+            height: 125%;
+        }
+    }
+}
+@media (max-width: 500px) {
+    .first-container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        max-width: 100vw;
+    }
+    .first-mid-box {
+        display: flex;
+        flex-direction: column-reverse;
+        flex: 1;
+        margin-top: 60px;
+    }
+    .first-left-box{
+        flex-shrink: none;
+        flex-grow: 1;
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        div {
+            width: auto;
+            height: auto;
+        }
+        .div-presentation, .div-projects {
+            margin-left: 5%;
+            margin-right: 5%;
+            p {
+                margin-top: 1%;
+            }
+            :first-child {
+                margin-left: 5%;
+            }
+        }
+        .div-passions{
+            margin-left: 5%;
+            margin-right: 5%;
+            align-self: auto;
+            :first-child {
+                margin-left: 5%;
+            }
+            p {
+                margin-top: 1%;
+            }
+        }
+        .div-readMore {
+            margin-right: 5%;
+            width: auto;
+            align-self: end;
+            @include archia;
+        }
+    }
+    .first-right-box {
+        flex-shrink: none;
+        flex-grow: 1;
+        width: 100%;
+        height: 50%;
+        position: relative;
+        overflow: hidden;
+        @include border(0,0,0,0);
+        .top-tape{
+            height: 20px;
+            overflow: hidden;
+            @include border(0,0,1);
+            display: flex;
+            align-items: center;
+            p {
+                @include rockstar(16);
+                @include scroll-right(5);
+                white-space: nowrap;
+            }
+        }
+        .bottom-tape{
+            position: absolute;
+            bottom: 0;
+            height: 20px;
+            overflow: hidden;
+            @include border(1);
+            display: flex;
+            align-items: center;
+            p {
+                @include rockstar(16);
+                @include scroll-left(5);
+                white-space: nowrap;
+            }
+        }
+    }
+    .first-top-box {
+        height: 60px;
+        width: 100%;
+        @include border(0,0,1);
+        display: flex;
+        position: fixed;
+        background: $background_grey_color;
+        z-index: 100;
+        div {
+            height: 100%;
+            width: auto;
+            padding-left: 2.5%;
+            padding-right: 2.5%;
+            display: flex;
+            align-items: center;
+            @include border(0,1);
+            a {
+                @include rockstar;
+                color: $black_color;
+            }
+        }
+        nav {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            a {
+                @include archia;
+            }
+            .menu {
+                color: $background_grey_color;
+                background: $black_color;
+                border-radius: 500px;
+                width: 70px;
+                text-align: center;
+            }
+        }
+    }
+    .first-bottom-box {
+        min-height: 100px;
+        width: 100%;
+        @include border(1,0,1);
+        @extend %center;
+        overflow: hidden;
+        p {
+            @include rockstar(80);
+            @include scroll-right;
+            white-space: nowrap;
+        }
+    }
+    .portrait{
+        height: calc(100% - 41px);
+        @extend %center;
+        div{
+            position: relative;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            overflow: hidden;
+            img {
+                position: absolute;
+                height: 125%;
+            }
+        }
+    }
+}
+
+// ! SECOND CONTAINER
+.second-container {
+    min-height: calc(100vh - 137px - 60px);
+    display: flex;
+    max-width: 100vw;
+}
+.second-left-box {
+    flex-shrink: 1;
+    width: 50%;
+    // padding: 2.5%;
+    .projects {
+        margin: 5%;
+        h2 {
+            margin-bottom: 1.5%;
+        }
+        p {
+            margin-bottom: 3%;
+        }
+        div {
+            transition: 0.3s $bezier;
+            width: auto;
+            height: auto;
+            background: #f00;
+            position: relative;
+            overflow: hidden;
+        }
+    }
+}
+.second-right-box {
+    flex-shrink: 1;
+    width: 50%;
+    @include border(0,0,0,1);
+}

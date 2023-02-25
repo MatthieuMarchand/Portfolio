@@ -1,0 +1,18 @@
+// ! COLORS
+$black_color: #101010;
+$background-grey-color: #EDEDED;
+$red_color: #DE3A3A;
+
+// ! FONTS FAMILY
+@font-face {
+    font-family: "rockstar";
+    src: url(/fonts/Rockstar-ExtraBold.otf) format("opentype");
+}
+@font-face {
+    font-family: "archia";
+    src: url(/fonts/Archia-Regular.otf) format("opentype");
+}
+
+// ! Others
+// pour l'instant j'ai mis ce code pour les transitions : "transition: 0.3s $bezier;"
+$bezier: ease;
