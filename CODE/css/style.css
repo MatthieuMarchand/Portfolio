@@ -1,0 +1,563 @@
+@font-face {
+  font-family: "rockstar";
+  src: url(/fonts/Rockstar-ExtraBold.otf) format("opentype");
+}
+@font-face {
+  font-family: "archia";
+  src: url(/fonts/Archia-Regular.otf) format("opentype");
+}
+@keyframes scroll-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes scroll-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.portrait, .first-bottom-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  background: #EDEDED;
+}
+
+body::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #EDEDED; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #101010; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid #EDEDED; /* creates padding around scroll thumb */
+}
+
+a {
+  text-decoration: none;
+  color: #101010;
+  transition: 0.3s ease;
+}
+
+a:not(.name):hover {
+  opacity: 0.6;
+}
+
+h3 {
+  font-family: "rockstar", "impact";
+  font-size: 20px;
+  letter-spacing: 8%;
+}
+
+h2 {
+  font-family: "rockstar", "impact";
+  font-size: 30px;
+  letter-spacing: 8%;
+}
+
+.paragraph {
+  font-family: "archia";
+  font-size: 16px;
+  line-height: 135%;
+  font-style: normal;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.6;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .paragraph {
+    font-family: "archia";
+    font-size: 14px;
+    line-height: 135%;
+    font-style: normal;
+  }
+}
+@media (max-width: 700px) {
+  .paragraph {
+    font-family: "archia";
+    font-size: 12px;
+    line-height: 135%;
+    font-style: normal;
+  }
+}
+@media (max-width: 500px) {
+  h3 {
+    font-family: "rockstar", "impact";
+    font-size: 16px;
+    letter-spacing: 8%;
+  }
+}
+.first-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 100vw;
+}
+
+.first-mid-box {
+  display: flex;
+  flex: 1;
+  margin-top: 60px;
+}
+
+.first-left-box {
+  flex-shrink: 1;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.first-left-box div {
+  width: 70%;
+  height: auto;
+}
+.first-left-box .div-presentation, .first-left-box .div-projects {
+  margin-left: 5%;
+}
+.first-left-box .div-presentation p, .first-left-box .div-projects p {
+  margin-top: 1%;
+}
+.first-left-box .div-presentation :first-child, .first-left-box .div-projects :first-child {
+  margin-left: 10%;
+}
+.first-left-box .div-passions {
+  margin-right: 5%;
+  align-self: end;
+}
+.first-left-box .div-passions :first-child {
+  margin-left: 10%;
+}
+.first-left-box .div-passions p {
+  margin-top: 1%;
+}
+.first-left-box .div-readMore {
+  margin-right: 5%;
+  width: auto;
+  align-self: end;
+  font-family: "archia";
+  font-size: 18px;
+  line-height: 135%;
+  font-style: normal;
+}
+
+.first-right-box {
+  flex-shrink: 1;
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+  border-top: solid 0px #101010;
+  border-right: solid 0px #101010;
+  border-bottom: solid 0px #101010;
+  border-left: solid 1px #101010;
+}
+.first-right-box .top-tape {
+  height: 40px;
+  overflow: hidden;
+  border-top: solid 0px #101010;
+  border-right: solid 0px #101010;
+  border-bottom: solid 1px #101010;
+  border-left: solid 0px #101010;
+  display: flex;
+  align-items: center;
+}
+.first-right-box .top-tape p {
+  font-family: "rockstar", "impact";
+  font-size: 30px;
+  letter-spacing: 8%;
+  animation: scroll-right infinite 5s linear;
+  white-space: nowrap;
+}
+.first-right-box .bottom-tape {
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  overflow: hidden;
+  border-top: solid 1px #101010;
+  border-right: solid 0px #101010;
+  border-bottom: solid 0px #101010;
+  border-left: solid 0px #101010;
+  display: flex;
+  align-items: center;
+}
+.first-right-box .bottom-tape p {
+  font-family: "rockstar", "impact";
+  font-size: 30px;
+  letter-spacing: 8%;
+  animation: scroll-left infinite 5s linear;
+  white-space: nowrap;
+}
+
+.first-top-box {
+  height: 60px;
+  width: 100%;
+  border-top: solid 0px #101010;
+  border-right: solid 0px #101010;
+  border-bottom: solid 1px #101010;
+  border-left: solid 0px #101010;
+  display: flex;
+  position: fixed;
+  background: #EDEDED;
+  z-index: 90;
+}
+.first-top-box div {
+  height: 100%;
+  width: auto;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  display: flex;
+  align-items: center;
+  border-top: solid 0px #101010;
+  border-right: solid 1px #101010;
+  border-bottom: solid 0px #101010;
+  border-left: solid 0px #101010;
+}
+.first-top-box div a {
+  font-family: "rockstar", "impact";
+  font-size: 30px;
+  letter-spacing: 8%;
+  color: #101010;
+}
+.first-top-box nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.first-top-box nav a {
+  font-family: "archia";
+  font-size: 18px;
+  line-height: 135%;
+  font-style: normal;
+}
+.first-top-box nav .menu {
+  color: #EDEDED;
+  background: #101010;
+  border-radius: 500px;
+  width: 70px;
+  text-align: center;
+}
+
+.first-bottom-box {
+  min-height: 135px;
+  width: 100%;
+  border-top: solid 1px #101010;
+  border-right: solid 0px #101010;
+  border-bottom: solid 1px #101010;
+  border-left: solid 0px #101010;
+  overflow: hidden;
+}
+.first-bottom-box p {
+  font-family: "rockstar", "impact";
+  font-size: 120px;
+  letter-spacing: 8%;
+  animation: scroll-right infinite 10s linear;
+  white-space: nowrap;
+}
+
+.portrait {
+  height: calc(100% - 82px);
+}
+.portrait div {
+  position: relative;
+  height: calc(100% - 40px);
+  width: calc(100% - 20px);
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  overflow: hidden;
+}
+.portrait div img {
+  position: absolute;
+  height: 125%;
+}
+
+@media (max-width: 500px) {
+  .first-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 100vw;
+  }
+  .first-mid-box {
+    display: flex;
+    flex-direction: column-reverse;
+    flex: 1;
+    margin-top: 60px;
+  }
+  .first-left-box {
+    flex-shrink: none;
+    flex-grow: 1;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .first-left-box div {
+    width: auto;
+    height: auto;
+  }
+  .first-left-box .div-presentation, .first-left-box .div-projects {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .first-left-box .div-presentation p, .first-left-box .div-projects p {
+    margin-top: 1%;
+  }
+  .first-left-box .div-presentation :first-child, .first-left-box .div-projects :first-child {
+    margin-left: 5%;
+  }
+  .first-left-box .div-passions {
+    margin-left: 5%;
+    margin-right: 5%;
+    align-self: auto;
+  }
+  .first-left-box .div-passions :first-child {
+    margin-left: 5%;
+  }
+  .first-left-box .div-passions p {
+    margin-top: 1%;
+  }
+  .first-left-box .div-readMore {
+    margin-right: 5%;
+    width: auto;
+    align-self: end;
+    font-family: "archia";
+    font-size: 18px;
+    line-height: 135%;
+    font-style: normal;
+  }
+  .first-right-box {
+    flex-shrink: none;
+    flex-grow: 1;
+    width: 100%;
+    height: 50%;
+    position: relative;
+    overflow: hidden;
+    border-top: solid 0px #101010;
+    border-right: solid 0px #101010;
+    border-bottom: solid 0px #101010;
+    border-left: solid 0px #101010;
+  }
+  .first-right-box .top-tape {
+    height: 20px;
+    overflow: hidden;
+    border-top: solid 0px #101010;
+    border-right: solid 0px #101010;
+    border-bottom: solid 1px #101010;
+    border-left: solid 0px #101010;
+    display: flex;
+    align-items: center;
+  }
+  .first-right-box .top-tape p {
+    font-family: "rockstar", "impact";
+    font-size: 16px;
+    letter-spacing: 8%;
+    animation: scroll-right infinite 5s linear;
+    white-space: nowrap;
+  }
+  .first-right-box .bottom-tape {
+    position: absolute;
+    bottom: 0;
+    height: 20px;
+    overflow: hidden;
+    border-top: solid 1px #101010;
+    border-right: solid 0px #101010;
+    border-bottom: solid 0px #101010;
+    border-left: solid 0px #101010;
+    display: flex;
+    align-items: center;
+  }
+  .first-right-box .bottom-tape p {
+    font-family: "rockstar", "impact";
+    font-size: 16px;
+    letter-spacing: 8%;
+    animation: scroll-left infinite 5s linear;
+    white-space: nowrap;
+  }
+  .first-top-box {
+    height: 60px;
+    width: 100%;
+    border-top: solid 0px #101010;
+    border-right: solid 0px #101010;
+    border-bottom: solid 1px #101010;
+    border-left: solid 0px #101010;
+    display: flex;
+    position: fixed;
+    background: #EDEDED;
+    z-index: 100;
+  }
+  .first-top-box div {
+    height: 100%;
+    width: auto;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    display: flex;
+    align-items: center;
+    border-top: solid 0px #101010;
+    border-right: solid 1px #101010;
+    border-bottom: solid 0px #101010;
+    border-left: solid 0px #101010;
+  }
+  .first-top-box div a {
+    font-family: "rockstar", "impact";
+    font-size: 30px;
+    letter-spacing: 8%;
+    color: #101010;
+  }
+  .first-top-box nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .first-top-box nav a {
+    font-family: "archia";
+    font-size: 18px;
+    line-height: 135%;
+    font-style: normal;
+  }
+  .first-top-box nav .menu {
+    color: #EDEDED;
+    background: #101010;
+    border-radius: 500px;
+    width: 70px;
+    text-align: center;
+  }
+  .first-bottom-box {
+    min-height: 100px;
+    width: 100%;
+    border-top: solid 1px #101010;
+    border-right: solid 0px #101010;
+    border-bottom: solid 1px #101010;
+    border-left: solid 0px #101010;
+    overflow: hidden;
+  }
+  .first-bottom-box p {
+    font-family: "rockstar", "impact";
+    font-size: 80px;
+    letter-spacing: 8%;
+    animation: scroll-right infinite 10s linear;
+    white-space: nowrap;
+  }
+  .portrait {
+    height: calc(100% - 41px);
+  }
+  .portrait div {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    overflow: hidden;
+  }
+  .portrait div img {
+    position: absolute;
+    height: 125%;
+  }
+}
+.second-container {
+  min-height: calc(100vh - 137px - 60px);
+  display: flex;
+  max-width: 100vw;
+}
+
+.second-left-box {
+  flex-shrink: 1;
+  width: 50%;
+}
+.second-left-box .projects {
+  margin: 5%;
+}
+.second-left-box .projects h2 {
+  margin-bottom: 1.5%;
+}
+.second-left-box .projects p {
+  margin-bottom: 3%;
+}
+.second-left-box .projects div {
+  transition: 0.3s ease;
+  width: auto;
+  height: auto;
+  background: #f00;
+  position: relative;
+  overflow: hidden;
+}
+
+.second-right-box {
+  flex-shrink: 1;
+  width: 50%;
+  border-top: solid 0px #101010;
+  border-right: solid 0px #101010;
+  border-bottom: solid 0px #101010;
+  border-left: solid 1px #101010;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  background: #101010;
+}
+
+.sectionPokemonCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  height: 440px;
+  width: 315px;
+  perspective: 1000px;
+  margin: 10px;
+}
+
+.card:hover {
+  z-index: 10;
+}
+
+.pokemonImages {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transition: all 0.2s ease-out;
+}
+
+.glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.2s ease-out;
+  border-radius: 15px;
+  mix-blend-mode: hard-light;
+  background: radial-gradient(circle at 0% 0%, white, transparent);
+}/*# sourceMappingURL=style.css.map */
