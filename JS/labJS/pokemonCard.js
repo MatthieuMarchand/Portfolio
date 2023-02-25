@@ -13,7 +13,7 @@ function handleMouseMove(e) {
     let glowY = y / elRect.height * 100;
     el.children[0].style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.1)`;
     el.children[1].style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.1)`;
-    el.children[1].style.background = `radial-gradient(circle at ${glowX}% ${glowY}%, white, transparent)`;
+    el.children[1].style.background = `radial-gradient(circle at ${glowX}% ${glowY}%, black, transparent)`;
     this.children[1].style.opacity = "0.3";
 }
 
