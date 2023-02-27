@@ -388,7 +388,7 @@ button:hover {
     overflow: hidden;
     border-top: solid 1px #101010;
     border-right: solid 0px #101010;
-    border-bottom: solid 0px #101010;
+    border-bottom: solid 1px #101010;
     border-left: solid 0px #101010;
     display: flex;
     align-items: center;
@@ -500,6 +500,10 @@ button:hover {
 }
 .second-left-box .projects p {
   margin-bottom: 3%;
+}
+.second-left-box .projects p a {
+  -webkit-text-decoration: underline #101010;
+          text-decoration: underline #101010;
 }
 .second-left-box .projects div {
   transition: 0.3s ease;

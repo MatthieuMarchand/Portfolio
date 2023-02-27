@@ -282,7 +282,7 @@ button:hover {
             bottom: 0;
             height: 20px;
             overflow: hidden;
-            @include border(1);
+            @include border(1,0,1);
             display: flex;
             align-items: center;
             p {
@@ -377,6 +377,9 @@ button:hover {
         }
         p {
             margin-bottom: 3%;
+            a {
+                text-decoration : underline $black_color;
+            }
         }
         div {
             transition: 0.3s $bezier;
