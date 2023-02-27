@@ -6,22 +6,6 @@
   font-family: "archia";
   src: url(/fonts/Archia-Regular.otf) format("opentype");
 }
-@keyframes scroll-left {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0%);
-  }
-}
-@keyframes scroll-right {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
 .portrait, .first-bottom-box {
   display: flex;
   justify-content: center;
@@ -224,7 +208,7 @@ button:hover {
   background: #EDEDED;
   z-index: 90;
 }
-.first-top-box div {
+.first-top-box .title {
   height: 100%;
   width: auto;
   padding-left: 2.5%;
@@ -236,11 +220,14 @@ button:hover {
   border-bottom: solid 0px #101010;
   border-left: solid 0px #101010;
 }
-.first-top-box div a {
+.first-top-box .title a {
   font-family: "rockstar", "impact";
   font-size: 30px;
   letter-spacing: 8%;
   color: #101010;
+}
+.first-top-box .divMenu {
+  display: none;
 }
 .first-top-box nav {
   flex: 1;
@@ -253,13 +240,6 @@ button:hover {
   font-size: 18px;
   line-height: 135%;
   font-style: normal;
-}
-.first-top-box nav .menu {
-  color: #EDEDED;
-  background: #101010;
-  border-radius: 500px;
-  width: 70px;
-  text-align: center;
 }
 
 .first-bottom-box {
@@ -296,6 +276,67 @@ button:hover {
   height: 125%;
 }
 
+@media (max-width: 750px) {
+  .first-top-box {
+    height: 60px;
+    width: 100%;
+    border-top: solid 0px #101010;
+    border-right: solid 0px #101010;
+    border-bottom: solid 1px #101010;
+    border-left: solid 0px #101010;
+    display: flex;
+    position: fixed;
+    background: #EDEDED;
+    z-index: 100;
+  }
+  .first-top-box .title {
+    height: 100%;
+    width: auto;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    display: flex;
+    align-items: center;
+    border-top: solid 0px #101010;
+    border-right: solid 1px #101010;
+    border-bottom: solid 0px #101010;
+    border-left: solid 0px #101010;
+  }
+  .first-top-box .title a {
+    font-family: "rockstar", "impact";
+    font-size: 30px;
+    letter-spacing: 8%;
+    color: #101010;
+  }
+  .first-top-box .divMenu {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+  .first-top-box .divMenu .menu {
+    color: #EDEDED;
+    background: #101010;
+    border-radius: 500px;
+    width: 70px;
+    text-align: center;
+    font-family: "archia";
+    font-size: 18px;
+    line-height: 135%;
+    font-style: normal;
+  }
+  .first-top-box nav {
+    flex: 1;
+    display: none;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .first-top-box nav a {
+    font-family: "archia";
+    font-size: 18px;
+    line-height: 135%;
+    font-style: normal;
+  }
+}
 @media (max-width: 500px) {
   .first-container {
     display: flex;
@@ -399,55 +440,6 @@ button:hover {
     letter-spacing: 8%;
     animation: scroll-left infinite 5s linear;
     white-space: nowrap;
-  }
-  .first-top-box {
-    height: 60px;
-    width: 100%;
-    border-top: solid 0px #101010;
-    border-right: solid 0px #101010;
-    border-bottom: solid 1px #101010;
-    border-left: solid 0px #101010;
-    display: flex;
-    position: fixed;
-    background: #EDEDED;
-    z-index: 100;
-  }
-  .first-top-box div {
-    height: 100%;
-    width: auto;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-    display: flex;
-    align-items: center;
-    border-top: solid 0px #101010;
-    border-right: solid 1px #101010;
-    border-bottom: solid 0px #101010;
-    border-left: solid 0px #101010;
-  }
-  .first-top-box div a {
-    font-family: "rockstar", "impact";
-    font-size: 30px;
-    letter-spacing: 8%;
-    color: #101010;
-  }
-  .first-top-box nav {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-  .first-top-box nav a {
-    font-family: "archia";
-    font-size: 18px;
-    line-height: 135%;
-    font-style: normal;
-  }
-  .first-top-box nav .menu {
-    color: #EDEDED;
-    background: #101010;
-    border-radius: 500px;
-    width: 70px;
-    text-align: center;
   }
   .first-bottom-box {
     min-height: 100px;

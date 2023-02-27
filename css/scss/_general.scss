@@ -145,7 +145,7 @@ button:hover {
     position: fixed;
     background: $background_grey_color;
     z-index: 90;
-    div {
+    .title {
         height: 100%;
         width: auto;
         padding-left: 2.5%;
@@ -158,6 +158,9 @@ button:hover {
             color: $black_color;
         }
     }
+    .divMenu {
+        display: none;
+    }
     nav {
         flex: 1;
         display: flex;
@@ -165,13 +168,6 @@ button:hover {
         justify-content: space-evenly;
         a {
             @include archia;
-        }
-        .menu {
-            color: $background_grey_color;
-            background: $black_color;
-            border-radius: 500px;
-            width: 70px;
-            text-align: center;
         }
     }
 }
@@ -201,6 +197,53 @@ button:hover {
         img {
             position: absolute;
             height: 125%;
+        }
+    }
+}
+@media (max-width: 750px) {
+    .first-top-box {
+        height: 60px;
+        width: 100%;
+        @include border(0,0,1);
+        display: flex;
+        position: fixed;
+        background: $background_grey_color;
+        z-index: 100;
+        .title {
+            height: 100%;
+            width: auto;
+            padding-left: 2.5%;
+            padding-right: 2.5%;
+            display: flex;
+            align-items: center;
+            @include border(0,1);
+            a {
+                @include rockstar;
+                color: $black_color;
+            }
+        }
+        .divMenu {
+            display: flex;
+            flex: 1;
+            align-items: center;
+            justify-content: center;
+            .menu {
+                color: $background_grey_color;
+                background: $black_color;
+                border-radius: 500px;
+                width: 70px;
+                text-align: center;
+                @include archia;
+            }
+        }
+        nav {
+            flex: 1;
+            display: none;
+            align-items: center;
+            justify-content: space-evenly;
+            a {
+                @include archia;
+            }
         }
     }
 }
@@ -289,44 +332,6 @@ button:hover {
                 @include rockstar(16);
                 @include scroll-left(5);
                 white-space: nowrap;
-            }
-        }
-    }
-    .first-top-box {
-        height: 60px;
-        width: 100%;
-        @include border(0,0,1);
-        display: flex;
-        position: fixed;
-        background: $background_grey_color;
-        z-index: 100;
-        div {
-            height: 100%;
-            width: auto;
-            padding-left: 2.5%;
-            padding-right: 2.5%;
-            display: flex;
-            align-items: center;
-            @include border(0,1);
-            a {
-                @include rockstar;
-                color: $black_color;
-            }
-        }
-        nav {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            a {
-                @include archia;
-            }
-            .menu {
-                color: $background_grey_color;
-                background: $black_color;
-                border-radius: 500px;
-                width: 70px;
-                text-align: center;
             }
         }
     }
