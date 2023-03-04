@@ -374,6 +374,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    overflow-y: scroll;
   }
   .first-left-box div {
     width: auto;
