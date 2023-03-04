@@ -247,8 +247,8 @@ button:hover {
             justify-content: center;
             background: red;
             a {
-                @include archia;
-                margin: 10px;
+                @include archia(25);
+                margin: 15px;
             }
         }
     }

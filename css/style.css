@@ -353,10 +353,10 @@ button:hover {
   }
   .first-top-box nav a {
     font-family: "archia";
-    font-size: 18px;
+    font-size: 25px;
     line-height: 135%;
     font-style: normal;
-    margin: 10px;
+    margin: 15px;
   }
 }
 @media screen and (max-width: 500px) {
