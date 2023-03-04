@@ -89,7 +89,7 @@ button:hover {
   display: none;
 }
 
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
   .paragraph {
     font-family: "archia";
     font-size: 14px;
@@ -97,7 +97,7 @@ button:hover {
     font-style: normal;
   }
 }
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .paragraph {
     font-family: "archia";
     font-size: 12px;
@@ -105,7 +105,7 @@ button:hover {
     font-style: normal;
   }
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   h3 {
     font-family: "rockstar", "impact";
     font-size: 16px;
@@ -292,7 +292,7 @@ button:hover {
   height: 125%;
 }
 
-@media (max-width: 750px) {
+@media screen and (max-width: 750px) {
   .first-top-box {
     height: 60px;
     width: 100%;
@@ -342,18 +342,24 @@ button:hover {
   }
   .first-top-box nav {
     flex: 1;
-    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    background: red;
   }
   .first-top-box nav a {
     font-family: "archia";
     font-size: 18px;
     line-height: 135%;
     font-style: normal;
+    margin: 10px;
   }
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .first-container {
     display: flex;
     flex-direction: column;

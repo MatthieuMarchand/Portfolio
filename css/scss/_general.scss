@@ -40,17 +40,17 @@ button:hover {
 .hidden {
     display: none;
 }
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
     .paragraph {
         @include archia(14);
     }
 }
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
     .paragraph {
         @include archia(12);
     }
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
     h3 {
         @include rockstar(16);
     }
@@ -200,7 +200,7 @@ button:hover {
         }
     }
 }
-@media (max-width: 750px) {
+@media screen and (max-width: 750px) {
     .first-top-box {
         height: 60px;
         width: 100%;
@@ -238,16 +238,22 @@ button:hover {
         }
         nav {
             flex: 1;
-            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
             align-items: center;
-            justify-content: space-evenly;
+            justify-content: center;
+            background: red;
             a {
                 @include archia;
+                margin: 10px;
             }
         }
     }
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
     .first-container {
         display: flex;
         flex-direction: column;
