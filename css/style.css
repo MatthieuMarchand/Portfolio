@@ -476,7 +476,7 @@ button:hover {
     white-space: nowrap;
   }
   .portrait {
-    height: calc(100% - 41px);
+    height: calc(100% - 42px);
   }
   .portrait div {
     position: relative;
