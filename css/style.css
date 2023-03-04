@@ -379,6 +379,7 @@ button:hover {
   .first-left-box div {
     width: auto;
     height: auto;
+    margin-top: 20px;
   }
   .first-left-box .div-presentation, .first-left-box .div-projects {
     margin-left: 5%;
