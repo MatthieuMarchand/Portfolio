@@ -339,6 +339,7 @@ button:hover {
     font-size: 18px;
     line-height: 135%;
     font-style: normal;
+    z-index: 1;
   }
   .first-top-box nav {
     flex: 1;
@@ -349,7 +350,7 @@ button:hover {
     height: 100vh;
     align-items: center;
     justify-content: center;
-    background: red;
+    background-color: #EDEDED;
   }
   .first-top-box nav a {
     font-family: "archia";
@@ -501,7 +502,17 @@ button:hover {
 .second-container {
   min-height: calc(100vh - 137px - 60px);
   display: flex;
+  flex-direction: column;
   max-width: 100vw;
+}
+
+.second-mid-box {
+  display: flex;
+  flex: 1;
+  border-top: solid 0px #101010;
+  border-right: solid 0px #101010;
+  border-bottom: solid 1px #101010;
+  border-left: solid 0px #101010;
 }
 
 .second-left-box {
@@ -539,45 +550,11 @@ button:hover {
   border-left: solid 1px #101010;
 }
 
-section {
-  width: 100%;
-  height: 100vh;
-  background: #101010;
-}
-
-.sectionPokemonCard {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card {
-  height: 440px;
-  width: 315px;
-  perspective: 1000px;
+footer {
   margin: 10px;
-}
-
-.card:hover {
-  z-index: 10;
-}
-
-.pokemonImages {
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-  transition: all 0.2s ease-out;
-}
-
-.glow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: all 0.2s ease-out;
-  border-radius: 15px;
-  mix-blend-mode: hard-light;
-  background: radial-gradient(circle at 0% 0%, white, transparent);
+  text-align: center;
+  font-family: "archia";
+  font-size: 16px;
+  line-height: 135%;
+  font-style: normal;
 }/*# sourceMappingURL=style.css.map */
