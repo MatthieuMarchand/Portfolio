@@ -7,14 +7,14 @@ const hideAllTexts = () => {
 
 const showText = num => {
     const newTextToShow = document.getElementById(`text${num}`);
-    const newImgToShow = document.getElementById(`img${num}`);
+    // const newImgToShow = document.getElementById(`img${num}`);
 
     if (newTextToShow === textToShow && textToShow.style.display === 'block') {
         hideAllTexts();
     } else {
         hideAllTexts();
         newTextToShow.style.display = 'block';
-        newImgToShow.style.display = 'block';
+        // newImgToShow.style.display = 'block';
         textToShow = newTextToShow;
     }
 };

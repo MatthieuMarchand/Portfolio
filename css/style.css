@@ -292,74 +292,6 @@ button:hover {
   height: 125%;
 }
 
-@media screen and (max-width: 750px) {
-  .first-top-box {
-    height: 60px;
-    width: 100%;
-    border-top: solid 0px #101010;
-    border-right: solid 0px #101010;
-    border-bottom: solid 1px #101010;
-    border-left: solid 0px #101010;
-    display: flex;
-    position: fixed;
-    background: #EDEDED;
-    z-index: 100;
-  }
-  .first-top-box .title {
-    height: 100%;
-    width: auto;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-    display: flex;
-    align-items: center;
-    border-top: solid 0px #101010;
-    border-right: solid 1px #101010;
-    border-bottom: solid 0px #101010;
-    border-left: solid 0px #101010;
-  }
-  .first-top-box .title a {
-    font-family: "rockstar", "impact";
-    font-size: 30px;
-    letter-spacing: 8%;
-    color: #101010;
-  }
-  .first-top-box .divMenu {
-    display: flex;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-  }
-  .first-top-box .divMenu .menu {
-    color: #EDEDED;
-    background: #101010;
-    border-radius: 500px;
-    width: 70px;
-    text-align: center;
-    font-family: "archia";
-    font-size: 18px;
-    line-height: 135%;
-    font-style: normal;
-    z-index: 1;
-  }
-  .first-top-box nav {
-    flex: 1;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    background-color: #EDEDED;
-  }
-  .first-top-box nav a {
-    font-family: "archia";
-    font-size: 25px;
-    line-height: 135%;
-    font-style: normal;
-    margin: 15px;
-  }
-}
 @media screen and (max-width: 500px) {
   .first-container {
     display: flex;
@@ -559,10 +491,27 @@ button:hover {
 }
 
 footer {
-  margin: 10px;
+  margin: 5px;
   text-align: center;
   font-family: "archia";
-  font-size: 16px;
+  font-size: 12px;
   line-height: 135%;
   font-style: normal;
+}
+
+@media screen and (max-width: 900px) {
+  footer {
+    font-family: "archia";
+    font-size: 10px;
+    line-height: 135%;
+    font-style: normal;
+  }
+}
+@media screen and (max-width: 730px) {
+  footer {
+    font-family: "archia";
+    font-size: 8px;
+    line-height: 135%;
+    font-style: normal;
+  }
 }/*# sourceMappingURL=style.css.map */
