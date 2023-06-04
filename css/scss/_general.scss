@@ -201,58 +201,58 @@ button:hover {
     }
 }
 @media screen and (max-width: 750px) {
-    // .first-top-box {
-    //     height: 60px;
-    //     width: 100%;
-    //     @include border(0,0,1);
-    //     display: flex;
-    //     position: fixed;
-    //     background: $background_grey_color;
-    //     z-index: 100;
-    //     .title {
-    //         height: 100%;
-    //         width: auto;
-    //         padding-left: 2.5%;
-    //         padding-right: 2.5%;
-    //         display: flex;
-    //         align-items: center;
-    //         @include border(0,1);
-    //         a {
-    //             @include rockstar;
-    //             color: $black_color;
-    //         }
-    //     }
-    //     .divMenu {
-    //         display: flex;
-    //         flex: 1;
-    //         align-items: center;
-    //         justify-content: center;
-    //         .menu {
-    //             color: $background_grey_color;
-    //             background: $black_color;
-    //             border-radius: 500px;
-    //             width: 70px;
-    //             text-align: center;
-    //             @include archia;
-    //             z-index: 1;
-    //         }
-    //     }
-    //     nav {
-    //         flex: 1;
-    //         flex-direction: column;
-    //         position: absolute;
-    //         top: 0;
-    //         width: 100vw;
-    //         height: 100vh;
-    //         align-items: center;
-    //         justify-content: center;
-    //         background-color: $background_grey_color;
-    //         a {
-    //             @include archia(25);
-    //             margin: 15px;
-    //         }
-    //     }
-    // }
+    .first-top-box {
+        height: 60px;
+        width: 100%;
+        @include border(0,0,1);
+        display: flex;
+        position: fixed;
+        background: $background_grey_color;
+        z-index: 100;
+        .title {
+            height: 100%;
+            width: auto;
+            padding-left: 2.5%;
+            padding-right: 2.5%;
+            display: flex;
+            align-items: center;
+            @include border(0,1);
+            a {
+                @include rockstar;
+                color: $black_color;
+            }
+        }
+        .divMenu {
+            display: flex;
+            flex: 1;
+            align-items: center;
+            justify-content: center;
+            .menu {
+                color: $background_grey_color;
+                background: $black_color;
+                border-radius: 500px;
+                width: 70px;
+                text-align: center;
+                @include archia;
+                z-index: 1;
+            }
+        }
+        nav {
+            flex: 1;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background-color: $background_grey_color;
+            a {
+                @include archia(25);
+                margin: 15px;
+            }
+        }
+    }
 }
 @media screen and (max-width: 500px) {
     .first-container {
