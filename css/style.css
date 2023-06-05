@@ -516,7 +516,6 @@ button:hover {
 }
 
 .second-left-box {
-  background: red;
   flex-shrink: 1;
   width: 50%;
 }
