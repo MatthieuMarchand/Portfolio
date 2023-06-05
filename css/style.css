@@ -516,6 +516,7 @@ button:hover {
 }
 
 .second-left-box {
+  background: red;
   flex-shrink: 1;
   width: 50%;
 }
@@ -576,6 +577,9 @@ footer {
   }
 }
 @media screen and (max-width: 730px) {
+  .second-left-box {
+    width: 100%;
+  }
   footer {
     font-family: "archia";
     font-size: 8px;

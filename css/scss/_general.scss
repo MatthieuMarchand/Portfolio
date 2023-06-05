@@ -388,6 +388,7 @@ button:hover {
     @include border(0,0,1);
 }
 .second-left-box {
+    background: red;
     flex-shrink: 1;
     width: 50%;
     .projects {
@@ -435,6 +436,9 @@ footer {
     }
 }
 @media screen and (max-width: 730px) {
+    .second-left-box {
+        width: 100%;
+    }
     footer {
         @include archia(8);
     }
