@@ -53,7 +53,7 @@ a {
 }
 
 a:not(.name):hover {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 h3 {
@@ -82,7 +82,7 @@ button {
 }
 
 button:hover {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .hidden {
@@ -144,6 +144,10 @@ button:hover {
 }
 .first-left-box .div-presentation :first-child, .first-left-box .div-projects :first-child {
   margin-left: 10%;
+}
+.first-left-box .div-presentation a.link, .first-left-box .div-projects a.link {
+  margin: unset;
+  text-decoration: underline;
 }
 .first-left-box .div-passions {
   margin-right: 5%;

@@ -18,7 +18,7 @@ a {
     transition: 0.3s $bezier;
 }
 a:not(.name):hover {
-    opacity: 0.6;
+    opacity: 0.5;
 }
 h3 {
     @include rockstar(20);
@@ -35,7 +35,7 @@ button {
     transition: 0.3s $bezier;
 }
 button:hover {
-    opacity: 0.6;
+    opacity: 0.5;
 }
 .hidden {
     display: none;
@@ -85,6 +85,10 @@ button:hover {
         }
         :first-child {
             margin-left: 10%;
+        }
+        a.link {
+            margin: unset;
+            text-decoration: underline;
         }
     }
     .div-passions{
